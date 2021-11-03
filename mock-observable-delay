@@ -1,0 +1,13 @@
+from authoring tools publish.service
+publishedSiteVersions is a mock object
+
+getPublishedSiteVersions(): Observable<PublishedSiteVersion[]> {
+    return of(publishedSiteVersions).pipe(delay(2000));
+}
+
+this.publishedSiteVersionsSub = this.publishService.getPublishedSiteVersions().subscribe(
+      publishedSiteVersions => {
+        this.publishedSiteVersions = publishedSiteVersions;
+        this.publishedSiteVersionsLoaded = true;
+      }
+    );
